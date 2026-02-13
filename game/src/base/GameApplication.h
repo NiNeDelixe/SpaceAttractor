@@ -2,10 +2,6 @@
 #ifndef BASE_GAMEAPPLICATION_H_
 #define BASE_GAMEAPPLICATION_H_
 
-#include <glm/glm.hpp>
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-
 #include <enginecore/core/EngineCoreApplication.h>
 
 #include "base/screens/GameScreen.h"

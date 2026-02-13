@@ -1,5 +1,58 @@
 {
   "version": "0.1",
   "dependencies": [
+    "assimp",
+    "tbb",
+    "entt",
+    "eventpp",
+    "glew",
+    "glfw3",
+    "glm",
+    "glog",
+    "gtest",
+    {
+      "name": "imgui",
+      "features": [
+        "docking-experimental",
+        "dx11-binding",
+        "glfw-binding",
+        "opengl3-binding",
+        "win32-binding"
+      ]
+    },
+    "nlohmann-json",
+    "opencv",
+    "opengl",
+    "stb",
+    "toml11",
+    "fixed-math",
+    "cpptrace",
+    "magic-enum"
+  ],
+  "overrides": [
+    {
+      "name": "glew",
+      "version": "2.2.0#6"
+    },
+    {
+      "name": "glfw3",
+      "version": "3.4#1"
+    },
+    {
+      "name": "glm",
+      "version": "1.0.1#3"
+    },
+    {
+      "name": "opengl",
+      "version": "2022-12-04#3"
+    },
+    {
+      "name": "stb",
+      "version": "2024-07-29#1"
+    },
+    {
+      "name": "eventpp",
+      "version": "0.1.3#1"
+    }
   ]
 }

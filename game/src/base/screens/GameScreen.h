@@ -10,8 +10,8 @@
 
 #include <enginecore/core/ecs/systems/ThirdPersonSystem.h>
 
-
 #include "base/ecs/systems/PlayerControllSystem.h"
+#include "base/ecs/systems/FloatingOriginSystem.h"
 #include "base/renderer/world/WorldRenderer.h"
 
 class GameScreen : public Screen

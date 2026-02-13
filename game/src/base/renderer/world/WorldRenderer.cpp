@@ -6,24 +6,39 @@ WorldRenderer::WorldRenderer(const std::weak_ptr<Level>& world)
 	m_model_renderer = std::make_shared<ModelRenderer>();
 
 	//TESTED
-	auto&& entity = EngiApp->getEntityRegistry().create();
-	auto&& model = EngiApp->assets().lock()->get<Model>("body_v2");
+	// auto&& entity = EngiApp->getEntityRegistry().create();
+	// auto&& model = EngiApp->assets().lock()->get<Model>("body_v2");
 	
-	EngiApp->getEntityRegistry().emplace<ModelComponent>(entity, model);
-	EngiApp->getEntityRegistry().emplace<Transform>(entity);
-	EngiApp->getEntityRegistry().emplace<PlayerComponent>(entity);
+	// EngiApp->getEntityRegistry().emplace<ModelComponent>(entity, model);
+	// EngiApp->getEntityRegistry().emplace<Transform>(entity);
+	// EngiApp->getEntityRegistry().emplace<PlayerComponent>(entity);
 
-	for (size_t i = 0; i < 10; i++)
-	{
-		auto&& entity2 = EngiApp->getEntityRegistry().create();
-		auto&& model2 = EngiApp->assets().lock()->get<Model>("spider");
+	// EngiApp->getEntityRegistry().get<Transform>(entity).m_pos = glm::fixvec3(1.f, 1.f, 1.f);
+
+	// for (size_t i = 0; i < 10; i++)
+	// {
+	// 	auto&& entity2 = EngiApp->getEntityRegistry().create();
+	// 	auto&& model2 = EngiApp->assets().lock()->get<Model>("spider");
 		
-		EngiApp->getEntityRegistry().emplace<ModelComponent>(entity2, model2);
-		EngiApp->getEntityRegistry().emplace<Transform>(entity2);
-	}
+	// 	EngiApp->getEntityRegistry().emplace<ModelComponent>(entity2, model2);
+	// 	EngiApp->getEntityRegistry().emplace<Transform>(entity2);
+	// }
 	
 
+	auto&& entity2 = EngiApp->getEntityRegistry().create();
+	auto&& model2 = EngiApp->assets().lock()->get<Model>("spider");
 	
+	EngiApp->getEntityRegistry().emplace<ModelComponent>(entity2, model2);
+	EngiApp->getEntityRegistry().emplace<Transform>(entity2);
+	EngiApp->getEntityRegistry().emplace<PlayerComponent>(entity2);
+	EngiApp->getEntityRegistry().emplace<WorldSpaceCache>(entity2);
+	EngiApp->getEntityRegistry().emplace<RenderTransform>(entity2);
+
+
+	auto v = EngiApp->getEntityRegistry().view<Camera>();
+	auto cam = v.front();
+	EngiApp->getEntityRegistry().emplace<WorldSpaceCache>(cam);
+	EngiApp->getEntityRegistry().emplace<FloatingOrigin>(cam);
 }
 
 void WorldRenderer::render()

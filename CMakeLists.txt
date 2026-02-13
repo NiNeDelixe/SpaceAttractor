@@ -22,11 +22,13 @@ endif()
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-message(STATUS "cmake toolchin file: ${CMAKE_TOOLCHAIN_FILE}")
+message(STATUS "cmake toolchain file: ${CMAKE_TOOLCHAIN_FILE}")
 
 set(${ENTT_BUILD_DOCS} ON)
 
 ####################################### Subdirectories #######################################
+
+add_subdirectory("thirdparty/Engine")
 
 add_subdirectory("Game")
 
