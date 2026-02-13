@@ -1,0 +1,3 @@
+[submodule "thirdparty/Engine"]
+	path = thirdparty/Engine
+	url = https://github.com/NiNeDelixe/EvilGodSim
