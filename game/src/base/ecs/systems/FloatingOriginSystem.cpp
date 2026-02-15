@@ -19,11 +19,8 @@ void FloatingOriginSystem::update(EntityRegistry<DefaultEntityIndentifier> &regi
 
     auto view = registry.view<WorldSpaceCache, RenderTransform>();
 
-    for (auto&& e : view)
+    for (auto&& [e, world, render] : view.each())
     {
-        auto& world = view.get<WorldSpaceCache>(e);
-        auto& render = view.get<RenderTransform>(e);
-
         glm::dvec3 relative = world.world_position - origin.origin;
 
         render.relative_position = glm::vec3(relative);

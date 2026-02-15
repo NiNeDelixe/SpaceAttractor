@@ -4,6 +4,9 @@
 
 #include <unordered_map>
 
+#define GLM_ENABLE_EXPERIMENTAL
+#include <glm/gtx/quaternion.hpp>
+
 #include <enginecore/core/EngineCoreApplication.h>
 
 #include <enginecore/core/graphics/render/ModelRenderer.h>
@@ -34,5 +37,7 @@ private:
 
     std::shared_ptr<ModelRenderer> m_model_renderer;
 };
+
+#undef GLM_ENABLE_EXPERIMENTAL
 
 #endif // !RENDER_WORLDRENDERER_H_

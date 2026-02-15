@@ -4,8 +4,8 @@ GameScreen::GameScreen()
 	: render(std::shared_ptr<Level>(nullptr))
 {
 	EngiApp->window()->events()->lockCursor(true);
-	EngiApp->setEntitySystem(SystemCategory::CAMERA_BEHAVIOR, std::make_shared<ThirdPersonSystem>());
-	EngiApp->setEntitySystem(SystemCategory::OBJECT_CONTROLLING, std::make_shared<PlayerControllSystem>());
+	// EngiApp->setEntitySystem(SystemCategory::CAMERA_BEHAVIOR, std::make_shared<ThirdPersonSystem>());
+	// EngiApp->setEntitySystem(SystemCategory::OBJECT_CONTROLLING, std::make_shared<PlayerControllSystem>());
 	EngiApp->addEntitySystem(std::make_shared<FloatingOriginSystem>());
 }
 
