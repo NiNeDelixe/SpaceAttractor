@@ -19,7 +19,7 @@
 class PlayerControllSystem : public ISystem
 {
 public:
-    PlayerControllSystem() = default;
+    PlayerControllSystem();
     ~PlayerControllSystem() = default;
 
 public:

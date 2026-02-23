@@ -9,7 +9,7 @@
 class Missile : public IComponent
 {
 public:
-   
+    
 };
 
 #endif  // ENTITIES_MISSILE_H_

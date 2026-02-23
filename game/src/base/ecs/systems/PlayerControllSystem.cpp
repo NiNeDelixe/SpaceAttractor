@@ -1,5 +1,10 @@
 #include "PlayerControllSystem.h"
 
+PlayerControllSystem::PlayerControllSystem()
+    : ISystem(SystemCategory::OBJECT_CONTROLLING)
+{
+}
+
 void PlayerControllSystem::update(EntityRegistry<DefaultEntityIndentifier> &registry)
 {
     const auto& player_view = registry.template view<ModelComponent, Transform, PlayerComponent>();

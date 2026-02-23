@@ -12,6 +12,7 @@
 
 #include "base/ecs/systems/PlayerControllSystem.h"
 #include "base/ecs/systems/FloatingOriginSystem.h"
+#include "base/ecs/systems/managment/GameSystemFactory.h"
 #include "base/renderer/world/WorldRenderer.h"
 
 class GameScreen : public Screen
