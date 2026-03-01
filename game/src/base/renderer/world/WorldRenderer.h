@@ -12,6 +12,8 @@
 #include <enginecore/core/graphics/render/ModelRenderer.h>
 
 #include <enginecore/core/ecs/components/PlayerComponent.h>
+#include <enginecore/core/ecs/components/physics/GravityComponent.h>
+#include <enginecore/core/ecs/components/physics/RigidBodyComponent.h>
 
 #include "base/ecs/components/FloatingOrigin.h"
 #include "base/ecs/components/RenderTransform.h"

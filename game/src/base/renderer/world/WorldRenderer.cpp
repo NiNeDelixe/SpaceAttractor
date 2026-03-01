@@ -34,6 +34,9 @@ WorldRenderer::WorldRenderer(const std::weak_ptr<Level>& world)
 	EngiApp->getEntityRegistry().emplace<WorldSpaceCache>(entity2);
 	EngiApp->getEntityRegistry().emplace<RenderTransform>(entity2);
 
+	EngiApp->getEntityRegistry().emplace<GravityComponent>(entity2).set_force(1);
+	EngiApp->getEntityRegistry().emplace<RigidBodyComponent>(entity2);
+
 
 	auto v = EngiApp->getEntityRegistry().view<Camera>();
 	auto cam = v.front();

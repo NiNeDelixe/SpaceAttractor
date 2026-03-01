@@ -105,7 +105,7 @@ void PhysicsSystem::update(EntityRegistry<DefaultEntityIndentifier> &registry)
 
         SensorsComponent* sensors_c = registry.try_get<SensorsComponent>(entity_r);
 
-        if (sensors_c)
+        if (!sensors_c)
         {
             continue;
         }
