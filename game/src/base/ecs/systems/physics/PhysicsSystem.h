@@ -22,7 +22,7 @@
 class PhysicsSystem : public ISystem
 {
 public:
-    PhysicsSystem() = default;
+    PhysicsSystem();
     ~PhysicsSystem() = default;
 
 public:

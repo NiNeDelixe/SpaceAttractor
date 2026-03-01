@@ -3,6 +3,11 @@
 inline const float E = 0.03f;
 inline const float MAX_FIX = 0.1f;
 
+PhysicsSystem::PhysicsSystem()
+    : ISystem(SystemCategory::PHYSICS)
+{
+}
+
 void PhysicsSystem::update(EntityRegistry<DefaultEntityIndentifier> &registry)
 {
     auto phys_view = registry.view<RigidBodyComponent, GravityComponent>();
