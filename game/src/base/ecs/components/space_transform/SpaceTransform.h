@@ -1,6 +1,6 @@
 #pragma once
-#ifndef COMPONENTS_SPACETRANSFORM_H_
-#define COMPONENTS_SPACETRANSFORM_H_
+#ifndef SPACE_TRANSFORM_SPACETRANSFORM_H_
+#define SPACE_TRANSFORM_SPACETRANSFORM_H_
 
 #include <enginecore/core/CoreDefines.h>
 
@@ -17,4 +17,4 @@ public:
     glm::dquat local_rotation;
 };
 
-#endif  // COMPONENTS_SPACETRANSFORM_H_
+#endif // SPACE_TRANSFORM_SPACETRANSFORM_H_

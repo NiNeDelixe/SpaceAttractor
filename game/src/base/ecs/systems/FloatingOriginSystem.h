@@ -7,11 +7,12 @@
 #include <enginecore/interfaces/ISystem.h>
 
 #include <enginecore/core/ecs/entities/Camera.h>
+#include <enginecore/core/ecs/components/transform/RenderTransform.h>
 
-#include "base/ecs/components/FloatingOrigin.h"
-#include "base/ecs/components/RenderTransform.h"
-#include "base/ecs/components/SpaceTransform.h"
-#include "base/ecs/components/WorldSpaceCache.h"
+#include "base/ecs/components/space_transform/FloatingOrigin.h"
+//#include "base/ecs/components/space_transform/RenderTransform.h"
+#include "base/ecs/components/space_transform/SpaceTransform.h"
+#include "base/ecs/components/space_transform/WorldSpaceCache.h"
 
 class FloatingOriginSystem : public ISystem
 {

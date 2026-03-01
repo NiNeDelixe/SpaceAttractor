@@ -1,6 +1,6 @@
 #pragma once
-#ifndef COMPONENTS_FLOATINGORIGIN_H_
-#define COMPONENTS_FLOATINGORIGIN_H_
+#ifndef SPACE_TRANSFORM_FLOATINGORIGIN_H_
+#define SPACE_TRANSFORM_FLOATINGORIGIN_H_
 
 #include <enginecore/core/CoreDefines.h>
 
@@ -14,4 +14,4 @@ public:
     glm::dvec3 origin;
 };
 
-#endif  // COMPONENTS_FLOATINGORIGIN_H_
+#endif // SPACE_TRANSFORM_FLOATINGORIGIN_H_

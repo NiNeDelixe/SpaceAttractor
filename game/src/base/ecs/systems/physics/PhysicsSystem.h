@@ -12,11 +12,12 @@
 #include <enginecore/core/ecs/components/physics/RigidBodyComponent.h>
 #include <enginecore/core/ecs/components/physics/VelocityComponent.h>
 #include <enginecore/core/ecs/components/physics/SensorsComponent.h>
+#include <enginecore/core/ecs/components/transform/RenderTransform.h>
 
-#include "base/ecs/components/FloatingOrigin.h"
-#include "base/ecs/components/RenderTransform.h"
-#include "base/ecs/components/SpaceTransform.h"
-#include "base/ecs/components/WorldSpaceCache.h"
+#include "base/ecs/components/space_transform/FloatingOrigin.h"
+//#include "base/ecs/components/RenderTransform.h"
+#include "base/ecs/components/space_transform/SpaceTransform.h"
+#include "base/ecs/components/space_transform/WorldSpaceCache.h"
 
 class PhysicsSystem : public ISystem
 {
@@ -31,4 +32,4 @@ private:
     
 };
 
-#endif  // SYSTEMS_PHYSICSSYSTEM_H_
+#endif // SYSTEMS_PHYSICSSYSTEM_H_

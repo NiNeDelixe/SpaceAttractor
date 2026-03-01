@@ -103,6 +103,8 @@ void PhysicsSystem::update(EntityRegistry<DefaultEntityIndentifier> &registry)
         hitbox.setPosition(pos);
         hitbox.setVelocity(vel);
 
+        rigidbody_c.rigidbody.setHitbox(hitbox);
+
         SensorsComponent* sensors_c = registry.try_get<SensorsComponent>(entity_r);
 
         if (!sensors_c)
