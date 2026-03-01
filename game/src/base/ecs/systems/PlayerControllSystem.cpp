@@ -11,7 +11,7 @@ void PlayerControllSystem::update(EntityRegistry<DefaultEntityIndentifier> &regi
 
     for (const auto& [player_entity, model_c, player_transform, player_c] : player_view.each())
     {
-        glm::dvec3 movement(0.0f);
+        glm::vec3 movement(0.0f);
 
         if (EngiApp->window()->events()->pressed(Keycode::W))
         {

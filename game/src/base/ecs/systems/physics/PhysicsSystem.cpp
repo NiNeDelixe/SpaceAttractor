@@ -140,7 +140,7 @@ void PhysicsSystem::update(EntityRegistry<DefaultEntityIndentifier> &registry)
             {
                 if (sensor.prev_entered.find(entity) == sensor.prev_entered.end()) 
                 {
-                    //sensor.enterCallback(sensor.entity, sensor.index, entity);
+                    sensor.enter_callback(sensor.entity, sensor.index);
                 }
                 sensor.next_entered.insert(entity);
             }
