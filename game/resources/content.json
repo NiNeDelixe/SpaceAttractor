@@ -2,7 +2,9 @@
     "shaders": [
     ],
     "models": [
-        "player"
+        "player",
+        "body_v2",
+        "spider"
     ],
     "lang": [
         "en_en"

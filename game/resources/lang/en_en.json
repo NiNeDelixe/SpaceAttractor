@@ -1,3 +1,9 @@
 {
-    "test:test": ""
+    "ui": {
+        "start": "Start",
+        "exit": "Exit"
+    },
+    "debug": {
+        "fps": "FPS"
+    }
 }
