@@ -8,6 +8,8 @@
 
 #include <enginecore/utils/ImguiIncludes.h>
 
+#include <enginecore/core/lang/Localization.h>
+
 #include "base/screens/GameScreen.h"
 
 class MainMenuUi : public Ui

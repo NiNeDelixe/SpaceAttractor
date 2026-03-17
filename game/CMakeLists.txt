@@ -15,9 +15,14 @@ set_target_properties(${EXECUTABLE_NAME}
         LINK_FLAGS_RELEASE "/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup"
 )
 
+find_package(cpptrace CONFIG REQUIRED)
+find_package(glog CONFIG REQUIRED)
+
 target_link_libraries(${EXECUTABLE_NAME}
     PUBLIC
         Engine::Core
+        cpptrace::cpptrace
+        glog::glog
 )
 
 target_include_directories(${EXECUTABLE_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src")

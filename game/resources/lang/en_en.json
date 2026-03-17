@@ -1,7 +1,16 @@
 {
     "ui": {
-        "start": "Start",
-        "exit": "Exit"
+        "main": {
+            "menu": {
+                "game_name": "Space Attractor",
+                "name": "Main menu",
+                "start": "Start",
+                "play": "Start",
+                "settings": "Settings",
+                "exit": "Exit",
+                "quit": "Quit"
+            }
+        }
     },
     "debug": {
         "fps": "FPS"

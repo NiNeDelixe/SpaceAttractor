@@ -24,14 +24,14 @@ void MainMenuUi::render()
     ImGui::SetNextWindowPos(panel_pos);
     ImGui::SetNextWindowSize(panel_size);
 
-    ImGui::Begin("Main Menu", nullptr,
+    ImGui::Begin(Localization::tr("ui.main.menu.name").c_str(), nullptr,
         ImGuiWindowFlags_NoTitleBar |
         ImGuiWindowFlags_NoResize |
         ImGuiWindowFlags_NoMove |
         ImGuiWindowFlags_NoScrollbar);
 
-    ImGui::SetCursorPosX((menu_size.x - ImGui::CalcTextSize("MY AWESOME GAME").x) * 0.5f);
-    ImGui::TextColored(ImVec4(1.0f, 0.8f, 0.0f, 1.0f), "MY AWESOME GAME");
+    ImGui::SetCursorPosX((menu_size.x - ImGui::CalcTextSize(Localization::tr("ui.main.menu.game_name").c_str()).x) * 0.5f);
+    ImGui::TextColored(ImVec4(1.0f, 0.8f, 0.0f, 1.0f), Localization::tr("ui.main.menu.game_name").c_str());
 
     ImGui::Spacing();
     ImGui::Separator();
@@ -43,21 +43,21 @@ void MainMenuUi::render()
 
     ImGui::SetCursorPosX((menu_size.x - button_width) * 0.5f);
 
-    if (ImGui::Button("Play", ImVec2(button_width, button_height))) {
+    if (ImGui::Button(Localization::tr("ui.main.menu.play").c_str(), ImVec2(button_width, button_height))) {
         EngiApp->setScreen(std::make_shared<GameScreen>());
     }
 
     ImGui::Spacing();
 
     ImGui::SetCursorPosX((menu_size.x - button_width) * 0.5f);
-    if (ImGui::Button("Settings", ImVec2(button_width, button_height))) {
+    if (ImGui::Button(Localization::tr("ui.main.menu.settings").c_str(), ImVec2(button_width, button_height))) {
         LOG(INFO) << "Settings do nothing";
     }
 
     ImGui::Spacing();
 
     ImGui::SetCursorPosX((menu_size.x - button_width) * 0.5f);
-    if (ImGui::Button("Exit", ImVec2(button_width, button_height))) {
+    if (ImGui::Button(Localization::tr("ui.main.menu.quit").c_str(), ImVec2(button_width, button_height))) {
         EngiApp->quit(0);
     }
 

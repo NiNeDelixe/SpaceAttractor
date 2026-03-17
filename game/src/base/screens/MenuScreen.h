@@ -24,7 +24,8 @@ public:
 	void draw(const float& delta) override;
 
 private:
-	std::vector<std::shared_ptr<Ui>>::iterator menu_ui;
+	std::vector<std::shared_ptr<Ui>>::iterator menu_ui_it;
+	std::shared_ptr<Ui> menu_ui;
 };
 
 #endif // !SCREEN_MENUSCREEN_H_

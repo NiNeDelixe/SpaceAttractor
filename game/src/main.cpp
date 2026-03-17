@@ -1,9 +1,24 @@
-﻿#include "base/GameApplication.h"
+﻿#include <cpptrace/cpptrace.hpp>
+#include <glog/logging.h>
+
+#include "base/GameApplication.h"
 
 
 int main(int argc, char* argv[])
 {
-	GameApplication app(argc, argv);
+	int return_code = 1;
 
-	return app.exec();
+	CPPTRACE_TRY
+	{
+		GameApplication app(argc, argv);
+
+		return_code = app.exec();
+	}
+	CPPTRACE_CATCH(const std::exception& exc)
+	{
+		LOG(ERROR) << "Exception in main" << exc.what() << std::endl << 
+			cpptrace::from_current_exception().to_string();
+	}
+
+	return return_code;
 }
