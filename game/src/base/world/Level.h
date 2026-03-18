@@ -12,15 +12,13 @@
 using GameObjectContainer = std::vector<std::shared_ptr<CRNMSP::GameObject>, 
 	UTLSNMSP::memory::GameObjectAllocator<std::shared_ptr<CRNMSP::GameObject>>>;
 
-/// <summary>
-/// Level contains data about objects
+/// @brief Level contains data about objects
 /// World contains data about save
-/// </summary>
 class Level
 {
 public:
 	Level() = default;
-	~Level() = default;
+	virtual ~Level() = default;
 
 public:
 	bool addGameObject(const std::shared_ptr<CRNMSP::GameObject>& object) { return false; }

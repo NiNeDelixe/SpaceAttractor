@@ -11,6 +11,7 @@
 #include <enginecore/core/lang/Localization.h>
 
 #include "base/screens/GameScreen.h"
+#include "base/world/TestLevel.h"
 
 class MainMenuUi : public Ui
 {

@@ -1,7 +1,7 @@
 #include "GameScreen.h"
 
-GameScreen::GameScreen()
-	: render(std::shared_ptr<Level>(nullptr))
+GameScreen::GameScreen(const std::shared_ptr<Level>& level)
+	: m_level(level), render(level)
 {
 	EngiApp->window()->events()->lockCursor(true);
 	EngiApp->getSystemManager()->emplaceSystems<GameSystemFactory>();

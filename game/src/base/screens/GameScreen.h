@@ -18,7 +18,7 @@
 class GameScreen : public Screen
 {
 public:
-	GameScreen();
+	GameScreen(const std::shared_ptr<Level>& level);
 	~GameScreen() = default;
 
 	void update(const float& delta) override;
@@ -28,6 +28,7 @@ public:
 
 private:
 	WorldRenderer render;
+	std::shared_ptr<Level> m_level;
 };
 
 
