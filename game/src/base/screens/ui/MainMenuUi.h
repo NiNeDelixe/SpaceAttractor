@@ -2,6 +2,8 @@
 #ifndef UI_MAINMENUUI_H_
 #define UI_MAINMENUUI_H_
 
+#include <array>
+
 #include <enginecore/core/graphics/ui/Ui.h>
 
 #include <enginecore/core/EngineCoreApplication.h>
@@ -15,15 +17,35 @@
 
 class MainMenuUi : public Ui
 {
+private:
+    enum class WorldMenuMode
+    {
+        Main,
+        CreateWorld,
+    };
+
+    enum class WorldGameType
+    {
+        Test,
+    };
+
 public:
-    MainMenuUi() {}
-    ~MainMenuUi() {}
+    MainMenuUi() = default;
+    ~MainMenuUi() override = default;
 
 public:
     virtual void update() override;
     virtual void render() override;
 
 private:
+    void renderMainMenu();
+    void renderCreateWorldMenu();
+    std::shared_ptr<World> createWorld() const;
+    std::string selectedGameTypeLabel() const;
+
+private:
+    WorldMenuMode m_mode = WorldMenuMode::Main;
+    WorldGameType m_selected_game_type = WorldGameType::Test;
 };
 
 #endif  // UI_MAINMENUUI_H_

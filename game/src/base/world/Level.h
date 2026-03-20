@@ -9,6 +9,8 @@
 #include "enginecore/utils/types/GameObjectsAllocator.h"
 #include "enginecore/utils/types/GameObject.h"
 
+class World;
+
 using GameObjectContainer = std::vector<std::shared_ptr<CRNMSP::GameObject>, 
 	UTLSNMSP::memory::GameObjectAllocator<std::shared_ptr<CRNMSP::GameObject>>>;
 
@@ -22,9 +24,15 @@ public:
 
 public:
 	bool addGameObject(const std::shared_ptr<CRNMSP::GameObject>& object) { return false; }
+	[[nodiscard]] std::shared_ptr<World> world() const { return m_world.lock(); }
 
 private:
-	GameObjectContainer m_objects;
+	friend class World;
+    void setWorld(const std::shared_ptr<World>& world) { m_world = world; }
+
+private:
+    GameObjectContainer m_objects;
+    std::weak_ptr<World> m_world;
 };
 
 

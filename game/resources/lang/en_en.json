@@ -8,7 +8,17 @@
                 "play": "Start",
                 "settings": "Settings",
                 "exit": "Exit",
-                "quit": "Quit"
+                "quit": "Quit",
+                "world": {
+                    "select": "World selection",
+                    "create_title": "Create world",
+                    "create_hint": "World selection mode currently works only as creating a new world.",
+                    "game_type": "Game type",
+                    "test_type": "Test",
+                    "test_description": "The \"Test\" type creates a new World and starts TestLevel.",
+                    "back": "Back",
+                    "create": "Create world"
+                }
             }
         }
     },

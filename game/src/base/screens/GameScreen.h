@@ -14,11 +14,12 @@
 #include "base/ecs/systems/FloatingOriginSystem.h"
 #include "base/ecs/systems/managment/GameSystemFactory.h"
 #include "base/renderer/world/WorldRenderer.h"
+#include "base/world/World.h"
 
 class GameScreen : public Screen
 {
 public:
-	GameScreen(const std::shared_ptr<Level>& level);
+	GameScreen(const std::shared_ptr<World>& level);
 	~GameScreen() = default;
 
 	void update(const float& delta) override;
@@ -28,7 +29,7 @@ public:
 
 private:
 	WorldRenderer render;
-	std::shared_ptr<Level> m_level;
+	std::shared_ptr<World> m_world;
 };
 
 

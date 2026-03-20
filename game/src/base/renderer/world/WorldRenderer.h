@@ -11,12 +11,12 @@
 
 #include <enginecore/core/graphics/render/ModelRenderer.h>
 
-#include "base/world/Level.h"
+#include "base/world/World.h"
 
 class WorldRenderer 
 {
 public:
-    WorldRenderer(const std::weak_ptr<Level>& world);
+    WorldRenderer(const std::weak_ptr<World>& world);
     ~WorldRenderer() = default;
 
 public:
@@ -26,7 +26,7 @@ private:
     void prepareShaders();
 
 private:
-    std::weak_ptr<Level> m_world;
+    std::weak_ptr<World> m_world;
 
     std::shared_ptr<ModelRenderer> m_model_renderer;
 };
