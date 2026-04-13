@@ -15,8 +15,8 @@ set_target_properties(${EXECUTABLE_NAME}
         LINK_FLAGS_RELEASE "/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup"
 )
 
-find_package(cpptrace CONFIG REQUIRED)
-find_package(glog CONFIG REQUIRED)
+include(Dependencies.cmake)
+SpaceAtractor_setup_dependencies()
 
 target_link_libraries(${EXECUTABLE_NAME}
     PUBLIC
