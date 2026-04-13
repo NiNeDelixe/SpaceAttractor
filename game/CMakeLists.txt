@@ -22,7 +22,8 @@ target_link_libraries(${EXECUTABLE_NAME}
     PUBLIC
         Engine::Core
         cpptrace::cpptrace
-        glog::glog
+        #glog::glog
+        ng-log::ng-log
 )
 
 target_include_directories(${EXECUTABLE_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src")

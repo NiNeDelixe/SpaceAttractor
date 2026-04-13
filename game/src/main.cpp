@@ -1,5 +1,5 @@
 ﻿#include <cpptrace/cpptrace.hpp>
-#include <glog/logging.h>
+#include <ng-log/logging.h>
 
 #include "base/GameApplication.h"
 

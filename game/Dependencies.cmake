@@ -20,9 +20,9 @@ function(SpaceAtractor_setup_dependencies)
 
 
   SpaceAtractor_find_or_fetch(cpptrace cpptrace::cpptrace "gh:jeremy-rifkin/cpptrace@1.0.4")
-  SpaceAtractor_find_or_fetch(glog glog::glog "gh:google/glog@0.7.1")
+  #SpaceAtractor_find_or_fetch(glog glog::glog "gh:google/glog@0.7.1")
 
-  #SpaceAtractor_find_or_fetch(ng-log ng-log::ng-log "gh:ng-log/ng-log@0.7.1")
+  SpaceAtractor_find_or_fetch(ng-log ng-log::ng-log "gh:ng-log/ng-log@0.7.1")
   
   # SpaceAtractor_find_or_fetch(ccache ccache "gh:ccache/ccache@4.13.2")
   # SpaceAtractor_find_or_fetch(npcap npcap "gh:nmap/npcap@1.87")

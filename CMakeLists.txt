@@ -13,6 +13,11 @@ endif()
 
 project("SpaceAttractor")
 
+if (NOT DEFINED CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 20)
+endif()
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 include(cmake/PreventInSourceBuilds.cmake)
 include(cmake/Emscripten.cmake)
 include(ProjectOptions.cmake)
