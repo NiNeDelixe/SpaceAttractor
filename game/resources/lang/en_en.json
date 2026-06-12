@@ -20,6 +20,15 @@
                     "create": "Create world"
                 }
             }
+        },
+        "pause": {
+            "menu": {
+                "name": "Pause menu",
+                "title": "Paused",
+                "description": "The game is paused. Press Escape again or use the button below to continue.",
+                "resume": "Resume",
+                "exit_to_menu": "Exit to main menu"
+            }
         }
     },
     "debug": {

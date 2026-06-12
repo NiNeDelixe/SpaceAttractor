@@ -12,7 +12,7 @@ class TestLevel : public Level
 {
 public:
     TestLevel();
-    ~TestLevel() = default;
+    ~TestLevel();
 
 private:
     

@@ -53,3 +53,7 @@ TestLevel::TestLevel()
 	EngiApp->getEntityRegistry().emplace<FloatingOrigin>(cam);
 	EngiApp->getEntityRegistry().emplace<RenderTransform>(cam);
 }
+
+TestLevel::~TestLevel()
+{
+}

@@ -16,20 +16,30 @@
 #include "base/renderer/world/WorldRenderer.h"
 #include "base/world/World.h"
 
+#include "base/screens/ui/PauseMenuUi.h"
+
 class GameScreen : public Screen
 {
 public:
 	GameScreen(const std::shared_ptr<World>& level);
-	~GameScreen() = default;
+	~GameScreen();
 
 	void update(const float& delta) override;
 	void draw(const float& delta) override;
 
-	void loadTestMap();
+private:
+    void setPaused(bool paused);
+    void showPauseMenu();
+    void hidePauseMenu();
+    void togglePause();
+    void exitToMainMenu();
 
 private:
 	WorldRenderer render;
-	std::shared_ptr<World> m_world;
+    std::shared_ptr<World> m_world;
+    bool m_is_paused = false;
+    bool m_has_pause_ui = false;
+    std::vector<std::shared_ptr<Ui>>::iterator m_pause_ui_it;
 };
 
 
