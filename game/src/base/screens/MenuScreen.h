@@ -5,7 +5,7 @@
 #include <enginecore/core/CoreDefines.h>
 
 #include <imgui.h>
-#include <glog/logging.h>
+#include <ng-log/logging.h>
 
 #include <enginecore/core/EngineCoreApplication.h>
 

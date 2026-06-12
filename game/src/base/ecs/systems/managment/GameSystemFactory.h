@@ -15,7 +15,7 @@ class GameSystemFactory : public EngineSystemFactory
 {
 public:
     GameSystemFactory() = default;
-    ~GameSystemFactory() = default;
+    virtual ~GameSystemFactory() = default;
 
 public:
     virtual SystemsContainer createSystems() override;
